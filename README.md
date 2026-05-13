@@ -14,4 +14,6 @@ Before starting the server, make sure the client has been built first, then cd i
 
 ### `npm run serve`
 
+If you run into problems clean out your sessions.json file to an empty object (so the content is {}) and restart the server.
+
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
