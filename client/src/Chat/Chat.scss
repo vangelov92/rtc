@@ -1,0 +1,123 @@
+.chat {
+    flex: 1 1 auto;
+    display: flex;
+    padding: 24px;
+    overflow: hidden;
+
+    > .users {
+        display: flex;
+        flex-direction: column;
+        min-width: 240px;
+        margin-left: 24px;
+        border: 1px solid #B7410E;
+        border-radius: 4px;
+
+        > .user {
+            display: flex;
+            align-items: center;
+            padding: 4px;
+
+            > .name {
+                flex: 1 1 auto;
+            }
+
+            > .offer {
+                display: flex;
+
+                > .accept,
+                > .decline {
+                    flex: 1 1 auto;
+                }
+            }
+        }
+    }
+
+    > .window {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+
+        > .history {
+            flex: 1 1 auto;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            border: 1px solid #B7410E;
+            border-radius: 4px;
+            word-break: break-word;
+            overflow: auto;
+
+            > .scroll-to-bottom {
+                justify-self: anchor-center;
+                cursor: pointer;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                color: #FFF;
+                background-color: #B7410E;
+                bottom: 16px;
+                padding: 8px;
+                border-radius: 4px;
+
+                &:before {
+                    content: '\e5db';
+                    font-family: 'Material Symbols Outlined';
+                    padding-right: 4px;
+                }
+            }
+
+            > .message {
+                margin: 4px;
+                padding: 4px;
+                border: 1px solid #B7410E;
+                border-radius: 4px;
+                max-width: 80%;
+
+                &[data-type='mine'] {
+                    align-self: end;
+                    color: #FFF;
+                    background-color: #B7410E;
+                    text-align: right;
+                }
+
+                &[data-type='their'] {
+                    align-self: start;
+                    text-align: left;
+                }
+            }
+
+            &::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #B7410E;
+                border: 1px solid white;
+                border-radius: 4px;
+            }
+        }
+
+        > .prompt {
+            display: flex;
+            margin-top: 16px;
+
+            > input,
+            > button {
+                background-color: #FFF;
+                border: 1px solid #B7410E;
+                padding: 8px;
+                border-radius: 4px;
+            }
+
+            > input {
+                flex: 1 1 auto;
+            }
+
+            > button {
+                cursor: pointer;
+                margin-left: 8px;
+            }
+        }
+    }
+}

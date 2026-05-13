@@ -1,0 +1,25 @@
+{
+  "type": "module",
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "ts,scss,html",
+      "quiet": true,
+      "legacyWatch": true,
+      "delay": 2500
+    }
+  },
+  "scripts": {
+    "build": "tsc && copyfiles --flat ./src/index.html ../dist && sass --no-source-map ./src/app.scss ../dist/app.css",
+    "watch": "npm-watch"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "del-cli": "^6.0.0",
+    "npm-watch": "^0.13.0",
+    "sass": "^1.85.1",
+    "typescript": "^5.8.2"
+  }
+}

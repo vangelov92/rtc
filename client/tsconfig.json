@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "ES2015",
+        "lib": [
+            "ES2015",
+            "DOM"
+        ],
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": false,
+        "outDir": "../dist",
+        "rootDir": "./src"
+    },
+}

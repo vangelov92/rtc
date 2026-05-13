@@ -1,0 +1,13 @@
+@use './LogIn/LogIn';
+@use './Main/Main';
+@use './Header/Header';
+@use './Chat/Chat';
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
