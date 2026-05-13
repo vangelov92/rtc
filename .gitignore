@@ -2,4 +2,3 @@ node_modules/
 dist/
 websocket.ts
 server/rtc.ts
-server/sessions.json
