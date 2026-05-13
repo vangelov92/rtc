@@ -31,7 +31,8 @@ export const InternalServerError = (response: ServerResponse) => {
 export const SendIndex = (request: IncomingMessage, response: ServerResponse) => {
     const html = fs.readFileSync(path.join(__dirname, `../dist/index.html`));
     response.writeHead(200, { 'content-type': 'text/html' });
-    response.end(html.toString().replace("{username}", getSession(getSessionId(request.headers.cookie))?.username));
+    const username = getSession(getSessionId(request.headers.cookie))?.username;
+    response.end(html.toString().replace("{username}", username ? `"${username}"` : "undefined"));
 }
 export const SendHTML = (response: ServerResponse, filename: string) => {
     const html = fs.readFileSync(path.join(__dirname, `../dist/${filename}`));
